@@ -1,0 +1,164 @@
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
+
+  --ff-primary: "Inter", sans-serif;
+
+  --fw-lt: 400;
+  --fw-md: 600;
+  --fw-bd: 700;
+
+  --fs-copy: 0.875rem;
+
+  --mobile-width: 20.4375rem;
+  --tablet-width: 28.5rem;
+  --desktop-width: 24rem;
+
+  --mobile-height: 36.1875rem;
+  --tablet-height: 38.1875rem;
+  --desktop-height: 38.1875rem;
+
+  font-size: 16px;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Utility Classes */
+
+.bg-body {
+  background-color: var(--clr-grey-900);
+}
+.bg-card {
+  background-color: var(--clr-grey-800);
+}
+
+.bg-btn {
+  background-color: var(--clr-grey-700);
+}
+.primary-font {
+  font-family: var(--ff-primary);
+}
+
+.tx-clr-wh {
+  color: var(--clr-white);
+}
+
+/* Primary Layout */
+
+body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.card {
+  width: clamp(20.438rem, 19.183rem + 5.352vw, 24rem);
+  height: clamp(36.188rem, 35.483rem + 3.005vw, 38.188rem);
+  border-radius: 0.75rem;
+}
+
+@media (max-width: 51rem) {
+  .card {
+    width: clamp(20.438rem, 12.745rem + 32.822vw, 28.5rem);
+  }
+}
+
+.container {
+  margin: clamp(1.5rem, 1.148rem + 1.502vw, 2.5rem);
+}
+
+.avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+}
+img {
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: var(--fw-bd);
+  font-size: 1.5rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.location {
+  font-weight: var(--fw-md);
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--clr-green);
+}
+
+.aside {
+  margin-block: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: var(--fw-md);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+ul {
+  margin-top: 1.5rem;
+}
+
+ul > li {
+  display: grid;
+  place-items: center;
+  height: 2.8125rem;
+  border-radius: 0.5rem;
+}
+
+ul > li:nth-child(2),
+ul > li:nth-child(3),
+ul > li:nth-child(4) {
+  margin-block: 1rem;
+}
+
+ul li a {
+  text-decoration: none;
+  font-weight: var(--fw-bd);
+  color: var(--clr-white);
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+li.bg-btn:hover,
+li.bg-btn:hover > * {
+  background-color: var(--clr-green);
+  color: var(--clr-grey-700);
+}
